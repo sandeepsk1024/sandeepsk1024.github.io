@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "sandeepsk1024.github.io",
+  "version": "1.0.0",
+  "license": "GNU/GPLv3",
+  "dependencies": {
+    "gatsby": "^2.20.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "dev": "gatsby develop"
+  }
+}
