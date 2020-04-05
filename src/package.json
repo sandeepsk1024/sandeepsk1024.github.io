@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config build/webpack.config.js",
-    "deploy-dotdot": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "webpack --env.NODE_ENV=development --config build/webpack.config.js",
+    "build": "webpack --env.NODE_ENV=production --config build/webpack.config.js",
+    "start:dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,10 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
-    "webpack-cli": "^3.3.11"
+    "html-webpack-plugin": "^4.0.4",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
