@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = env => {
@@ -15,7 +16,11 @@ module.exports = env => {
         },
         plugins: [
             new webpack.ProgressPlugin(),
-            new HtmlWebpackPlugin({ template: './app/views/index.pug' })
+            new HtmlWebpackPlugin({ template: './app/views/index.pug' }),
+            new FaviconsWebpackPlugin({
+                logo: './app/assets/favicon.png',
+                outputPath: '/public/assets/',
+            })
         ],
         externals: {
             "react": "React",
