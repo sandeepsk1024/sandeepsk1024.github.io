@@ -11,12 +11,20 @@ module.exports = env => {
         module: {
             rules: [
                 { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-                { test: /\.pug$/, exclude: /node_modules/, loader: "pug-loader", options: {self: true}}
+                { test: /\.pug$/, exclude: /node_modules/, loader: "pug-loader", options: { self: true } },
+                {
+                    test: /\.css$/,
+                    exclude: /node_modules/,
+                    use: [
+                        { loader: 'style-loader' },
+                        { loader: 'css-loader' },
+                        { loader: 'postcss-loader', options: {config: {path:"./build"}}}
+                    ]
+                }
             ]
         },
         plugins: [
-            new webpack.ProgressPlugin(),
-            new HtmlWebpackPlugin({ template: './app/views/index.pug', isProd: env.NODE_ENV == "production"}),
+            new HtmlWebpackPlugin({ template: './app/views/index.pug', isProd: env.NODE_ENV == "production" }),
             new FaviconsWebpackPlugin({
                 logo: './app/assets/favicon.png',
                 outputPath: './',
