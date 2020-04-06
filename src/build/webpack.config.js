@@ -19,6 +19,9 @@ module.exports = env => {
         plugins: [
             new webpack.ProgressPlugin(),
             new HtmlWebpackPlugin({ template: './app/views/index.pug' })
-        ]
+        ],
+        devServer: {
+            port: 9000
+        }
     }
 }
