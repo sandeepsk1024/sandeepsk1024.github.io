@@ -20,6 +20,7 @@ module.exports = env => {
             new FaviconsWebpackPlugin({
                 logo: './app/assets/favicon.png',
                 outputPath: './',
+                prefix: '',
                 favicons: {
                     icons: {
                         android: false,              // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
