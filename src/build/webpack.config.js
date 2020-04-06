@@ -6,10 +6,7 @@ module.exports = env => {
     return {
         mode: env.NODE_ENV || "none",
         entry: "./app/index.js",
-        output: {
-            path: path.resolve(__dirname, "../.."),
-            filename: "[name].bundle.js"
-        },
+        
         module: {
             rules: [
                 { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
@@ -20,6 +17,15 @@ module.exports = env => {
             new webpack.ProgressPlugin(),
             new HtmlWebpackPlugin({ template: './app/views/index.pug' })
         ],
+        externals: {
+            "react": "React",
+            "react-dom" : "ReactDOM",
+            "whatwg-fetch": "fetch"
+        },
+        output: {
+            path: path.resolve(__dirname, "../.."),
+            filename: "[name].bundle.js"
+        },
         devServer: {
             port: 9000
         }
