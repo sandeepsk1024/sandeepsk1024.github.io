@@ -11,7 +11,7 @@ module.exports = env => {
         module: {
             rules: [
                 { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-                { test: /\.pug$/, exclude: /node_modules/, loader: "pug-loader" }
+                { test: /\.pug$/, exclude: /node_modules/, loader: "pug-loader", options: {globals: {isProd: env.NODE_ENV == "production"}} }
             ]
         },
         plugins: [
@@ -38,6 +38,8 @@ module.exports = env => {
         externals: {
             "react": "React",
             "react-dom": "ReactDOM",
+            "redux": "redux",
+            "react-redux": "react-redux",
             "whatwg-fetch": "fetch"
         },
         output: {

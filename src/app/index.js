@@ -1,6 +1,6 @@
 import "whatwg-fetch"
 import React from 'react'
 import ReactDOM from 'react-dom'
-import IndexPage from './pages/page.index'
+import RootPage from './pages/page.root'
 
-ReactDOM.render(<IndexPage />, document.querySelector("#root-container"))
+ReactDOM.render(<RootPage />, document.querySelector("#root-container"))
