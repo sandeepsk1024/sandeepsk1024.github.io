@@ -38,8 +38,8 @@ module.exports = env => {
         externals: {
             "react": "React",
             "react-dom": "ReactDOM",
-            "redux": "redux",
-            "react-redux": "react-redux",
+            "redux": "Redux",
+            "react-redux": "ReactRedux",
             "whatwg-fetch": "fetch"
         },
         output: {
