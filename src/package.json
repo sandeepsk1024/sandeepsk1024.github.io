@@ -8,7 +8,7 @@
     "build:dev": "webpack --env.NODE_ENV=development --config build/webpack.config.js",
     "build": "webpack --env.NODE_ENV=production --config build/webpack.config.js",
     "start:dev": "webpack-dev-server --env.NODE_ENV=none --config build/webpack.config.js",
-    "deploy": "gh-pages -d dist -b master",
+    "deploy": "gh-pages -d ../dist -b master",
     "build-deploy": "npm run build && npm run deploy"
   },
   "author": "",
