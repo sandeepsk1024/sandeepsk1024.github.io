@@ -51,7 +51,7 @@ module.exports = env => {
             "whatwg-fetch": "fetch"
         },
         output: {
-            path: path.resolve(__dirname, "../.."),
+            path: path.resolve(__dirname, "../../dist"),
             filename: "[name].bundle.js"
         },
         devServer: {
