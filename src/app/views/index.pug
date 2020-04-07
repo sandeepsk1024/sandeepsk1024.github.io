@@ -1,8 +1,10 @@
-- const isProd = self.htmlWebpackPlugin.options.isProd
+- const isProd = false
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="../assets/global.css")
+		link(rel="icon", href="../assets/favicon.png")
 		script(crossorigin="crossorigin", src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js")
 		if isProd
 			script(crossorigin="crossorigin", src="https://unpkg.com/react@16/umd/react.production.min.js")
@@ -17,3 +19,4 @@ html(lang="en")
 		title Document
 	body
 		#root-container
+		script(src="../index.js")
