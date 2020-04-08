@@ -23,6 +23,14 @@
   "devDependencies": {
     "gh-pages": "^2.2.0",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1",
     "pug": "^2.0.4"
+  },
+  "alias": {
+    "react": "./build/aliases/alias.react",
+    "react-dom": "./build/aliases/alias.react-dom",
+    "redux": "./build/aliases/alias.redux",
+    "whatwg-fetch": "./build/aliases/alias.fetch",
+    "react-redux": "./build/aliases/alias.react-redux"
   }
 }
