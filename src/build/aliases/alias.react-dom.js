@@ -1,1 +1,1 @@
-export default ReactDOM;
+module.exports = ReactDOM;

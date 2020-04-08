@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel app/views/index.pug",
+    "dev": "parcel serve app/views/index.pug --out-dir ../dist --port 9000",
     "build": "parcel build app/views/index.pug --out-dir ../dist",
     "deploy": "gh-pages -d ../dist -b master",
     "build-deploy": "npm run build && npm run deploy"
@@ -29,7 +29,6 @@
   "alias": {
     "react": "./build/aliases/alias.react",
     "react-dom": "./build/aliases/alias.react-dom",
-    "redux": "./build/aliases/alias.redux",
     "whatwg-fetch": "./build/aliases/alias.fetch",
     "react-redux": "./build/aliases/alias.react-redux"
   }

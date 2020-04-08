@@ -1,1 +1,1 @@
-export default React;
+module.exports = React;

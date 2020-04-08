@@ -1,1 +1,1 @@
-export default ReactRedux;
+module.exports = ReactRedux;

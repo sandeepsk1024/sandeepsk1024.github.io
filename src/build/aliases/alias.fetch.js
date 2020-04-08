@@ -1,1 +1,1 @@
-export default fetch;
+module.exports = fetch;
