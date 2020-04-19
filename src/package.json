@@ -15,9 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "whatwg-fetch": "^3.0.0"
@@ -41,6 +43,7 @@
     "react": "./build/aliases/alias.react",
     "react-dom": "./build/aliases/alias.react-dom",
     "whatwg-fetch": "./build/aliases/alias.fetch",
-    "react-redux": "./build/aliases/alias.react-redux"
+    "react-redux": "./build/aliases/alias.react-redux",
+    "axios": "./build/aliases/alias.axios"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Greeter from './greeter'
+import Greeter from '.'
 
 test ("Greeter: it renders without exception: props:none", () => {
     const component = renderer.create(
