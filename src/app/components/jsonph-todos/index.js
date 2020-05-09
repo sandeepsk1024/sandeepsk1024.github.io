@@ -11,7 +11,15 @@ const TodosList = ({userId}) => {
         }
     }, [])
     return (
-        <h1>JSON Placeholder - Todos List</h1>
+        <>
+            <ul>
+                {todos.map(t => {
+                    return <li key={t.id}>
+                        {t.title}
+                    </li>
+                })}
+            </ul>
+        </>
     )
 }
 
