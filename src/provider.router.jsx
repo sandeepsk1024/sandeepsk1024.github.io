@@ -7,12 +7,14 @@ import MainLayout from "./pages/layout";
 import LandingPage from "./pages/landing";
 import ErrorPage from "./pages/error";
 
-import ToolsLayout from './pages/tools/layout';
-import TemperatureConv from "./pages/tools/converter.tmp";
+import ShowcaseLayout from './pages/showcase/layout'
+
+import ConvertersLayout from './pages/showcase/converters/layout';
+import ConvTemperature from "./pages/showcase/converters/tempr";
 
 
-import VizLayout from './pages/viz/layout';
-import Viz1 from './pages/viz/viz1';
+// import VizLayout from './pages/viz/layout';
+// import Viz1 from './pages/viz/viz1';
 
 const configRoutes = [
   {
@@ -25,25 +27,33 @@ const configRoutes = [
         element: <LandingPage />,
       },
       {
-        path: "/tools",
-        element: <ToolsLayout />,
+        path: "/showcase",
+        element: <ShowcaseLayout />,
         children: [
           {
-            path: "/tools/conv.tempr",
-            element: <TemperatureConv />,
+            path: "/showcase/converters",
+            element: <ConvertersLayout />,
+            children: [
+              {
+                path: "/showcase/converters/conv.tempr",
+                element: <ConvTemperature />,
+              },
+            ]
           },
+          // {
+          //   path: "/viz",
+          //   element: <VizLayout />,
+          //   children: [
+          //     {
+          //       path: "/viz/viz1",
+          //       element: <Viz1 />,
+          //     },
+          //   ]
+          // },
+          
         ]
       },
-      {
-        path: "/viz",
-        element: <VizLayout />,
-        children: [
-          {
-            path: "/viz/viz1",
-            element: <Viz1 />,
-          },
-        ]
-      },
+      
     ]
   },
 ]

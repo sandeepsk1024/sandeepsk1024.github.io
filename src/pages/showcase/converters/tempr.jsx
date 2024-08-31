@@ -1,4 +1,4 @@
-export default function TemperatureConv() {
+export default function Temperature() {
   return (
     <>
       Convert temperature

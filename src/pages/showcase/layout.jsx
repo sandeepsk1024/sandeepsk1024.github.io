@@ -1,12 +1,12 @@
-import Footer from "#components/footer";
+import Header from "./header";
 
 import { Outlet } from "react-router-dom";
 
-export default function Layout() {
+export default function ShowcaseLayout() {
   return (
     <>
+      <Header />
       <Outlet />
-      <Footer />
     </>
   );
 }
